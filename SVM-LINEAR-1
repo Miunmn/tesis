@@ -1,0 +1,44 @@
+Dataset: CM1.csv 
+              precision    recall  f1-score   support
+
+       False       0.94      0.68      0.79        90
+        True       0.17      0.60      0.27        10
+
+    accuracy                           0.67       100
+   macro avg       0.55      0.64      0.53       100
+weighted avg       0.86      0.67      0.74       100
+--------------------------------------------------
+
+Dataset: KC1.csv 
+              precision    recall  f1-score   support
+
+       False       0.91      0.70      0.79       352
+        True       0.31      0.67      0.42        70
+
+    accuracy                           0.70       422
+   macro avg       0.61      0.69      0.61       422
+weighted avg       0.81      0.70      0.73       422
+--------------------------------------------------
+
+Dataset: KC2.csv 
+              precision    recall  f1-score   support
+
+       False       0.94      0.74      0.83        92
+        True       0.27      0.69      0.39        13
+
+    accuracy                           0.73       105
+   macro avg       0.61      0.72      0.61       105
+weighted avg       0.86      0.73      0.78       105
+--------------------------------------------------
+
+Dataset: PC1.csv 
+              precision    recall  f1-score   support
+
+       False       0.96      0.69      0.80       206
+        True       0.12      0.60      0.20        15
+
+    accuracy                           0.68       221
+   macro avg       0.54      0.64      0.50       221
+weighted avg       0.90      0.68      0.76       221
+--------------------------------------------------
+
