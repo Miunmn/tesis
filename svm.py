@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 from sklearn.model_selection import GridSearchCV
+from sklearn import metrics
 
 
 def run_svm():
@@ -53,6 +54,21 @@ def run_svm():
     report = f"Dataset: {dataset} \n"
     report += classification_report(y_test, y_predict)
     print("output_dict_format", classification_report(y_test, y_predict, output_dict=True))
+    confusion_matrix = metrics.confusion_matrix(y_test, y_predict)
+
+    # Precision Score
+    precision_score = confusion_matrix[0][0] / (confusion_matrix[0][1] + confusion_matrix[0][0] )
+
+    # Recall Score
+    recall_score = confusion_matrix[0][0] / (confusion_matrix[1][0] + confusion_matrix[0][0] )
+
+    # F1 Score
+    f1_score = 2*precision_score*recall_score / (precision_score + recall_score)
+
+    print(f"Precision Score: {precision_score}")
+    print(f"Recall Score: {recall_score}")
+    print(f"F1 Score: {f1_score}")
+    
     report += "--------------------------------------------------\n\n"
     print("report", report)
     total_report += report
